@@ -14,7 +14,7 @@ export default async function AdminPage() {
   const { data, error } = await context.supabase.from("posters").select("*").order("sort_order").order("created_at", { ascending: false });
   if (error) throw new Error(`管理用ポスター一覧を取得できませんでした: ${error.message}`);
   const posters = (data as PosterRow[]).map(withImageUrl);
-  return <main className="min-h-screen bg-[#c0c0c0]"><section className="min-h-screen bg-[#c0c0c0]">
+  return <main className="desktop-pattern min-h-screen p-2 sm:p-5"><section className="win-window mx-auto min-h-[calc(100vh-1rem)] max-w-6xl bg-[#c0c0c0]">
     <header className="app-header"><h1>oshimaru Control Panel</h1><span className="app-header-meta">{context.user.email}</span></header>
     <nav aria-label="管理メニュー" className="win-toolbar flex-wrap">
       <Link aria-label="新しいポスター" className="win-button inline-flex min-h-11 items-center px-3 text-xs font-bold" href="/admin/posters/new">新規作成(N)</Link>
