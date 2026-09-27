@@ -1,3 +1,2 @@
 import Link from "next/link";
-import { WinTitlebar } from "@/components/win95-chrome";
-export default function NotFound() { return <main className="desktop-pattern flex min-h-screen items-center justify-center p-4"><div className="win-window max-w-md"><WinTitlebar><span>oshimaru</span></WinTitlebar><div className="space-y-4 p-6"><p className="font-bold">ファイルが見つかりません</p><p>指定されたページまたはポスターは見つかりませんでした。</p><Link className="win-link" href="/">公開ページへ戻る</Link></div></div></main>; }
+export default function NotFound() { return <main className="mono-desktop flex items-center justify-center"><div className="mono-window mono-dialog w-full max-w-md"><div className="mono-titlebar"><span>oshimaru / not found</span></div><div className="mono-dialog-body space-y-4"><p className="font-bold">ファイルが見つかりません</p><p>指定されたページまたはポスターは見つかりませんでした。</p><Link className="win-link" href="/">公開ページへ戻る</Link></div></div></main>; }
