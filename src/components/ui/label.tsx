@@ -2,5 +2,5 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export function Label({ className, ...props }: React.LabelHTMLAttributes<HTMLLabelElement>) {
-  return <label className={cn("block text-sm font-bold", className)} {...props} />;
+  return <label className={cn("win-panel-label text-xs", className)} {...props} />;
 }
